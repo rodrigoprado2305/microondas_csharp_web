@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Rodrigo-MicroOndas.props" />
+</Project>

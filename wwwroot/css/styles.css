@@ -1,0 +1,10 @@
+﻿/* Estilos para o botão de início rápido */
+#btnInicioRapido {
+    /* Estilos padrão */
+}
+
+    /* Estilos para o botão de início rápido desabilitado */
+    #btnInicioRapido:disabled {
+        background-color: #e0e0e0; /* Cor de fundo cinza claro */
+        color: #a0a0a0; /* Cor do texto cinza claro */
+    }

@@ -1,0 +1,26 @@
+﻿@model List<BennerMicroOndas.Models.ProgramaAquecimento>
+
+@{
+    ViewData["Title"] = "Programas Pré-Definidos";
+}
+
+<h1>Programas Pré-Definidos</h1>
+
+@foreach (var programa in Model)
+{
+<div>
+    <h3>@programa.Nome</h3>
+    <p>Alimento: @programa.Alimento</p>
+    <p>Tempo: @programa.Tempo segundos</p>
+    <p>Potência: @programa.Potencia</p>
+    <p>Instruções: @programa.Instrucoes</p>
+    <form method="post" action="/Microondas/IniciarAquecimento">
+        <input type="hidden" name="tempo" value="@programa.Tempo" />
+        <input type="hidden" name="potencia" value="@programa.Potencia" />
+        <input type="submit" value="Iniciar Aquecimento" />
+    </form>
+    <p id="stringAquecimento"></p>
+    <hr />
+</div>
+}
+

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\cadastrarProgramas.js" />
+    <Content Remove="wwwroot\js\microondas - Cópia.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\cadastrarProgramas.js" />
+    <None Include="wwwroot\js\microondas - Cópia.js" />
+    <None Include="wwwroot\js\microondas.js" />
+  </ItemGroup>
+
+</Project>

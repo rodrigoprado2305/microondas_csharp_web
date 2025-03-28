@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Rodrigo-MicroOndas/1.0.0": {
+        "runtime": {
+          "Rodrigo-MicroOndas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Rodrigo-MicroOndas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

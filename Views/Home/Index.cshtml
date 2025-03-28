@@ -1,0 +1,68 @@
+﻿@model List<BennerMicroOndas.Models.ProgramaAquecimento>
+
+@{
+    ViewData["Title"] = "Micro-ondas Digital";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <style>
+        .link-cadastro {
+            margin-top: 20px; /* Adiciona uma margem superior de 20px */
+        }
+    </style>
+</head>
+
+<h1>Micro-ondas Digital</h1>
+
+
+
+<form id="formAquecimento">
+    <div>
+        <label for="programa">Programa:</label>
+        <select id="programaSelect" name="programa">
+            <option value="">Programa</option>
+            @foreach (var programa in Model)
+            {
+                <option value="@programa.Nome" style="font-style: @(programa.Customizado ? "italic" : "normal")">@programa.Nome</option>
+            }
+        </select>
+        <input type="hidden" id="programaSelecionado" name="programaSelecionado" value="" />
+    </div>
+
+
+
+    <div>
+        <label for="tempo">Tempo (segundos):</label>
+        <input type="number" id="tempo" name="tempo" min="1" max="120" required>
+        <div class="invalid-feedback">
+            Por favor, insira um valor entre 1 e 120 segundos.
+        </div>
+    </div>
+
+    <div>
+        <label for="potencia">Potência (1-10):</label>
+        <input type="number" id="potencia" name="potencia" min="1" max="10" value="10" required>
+        <div class="invalid-feedback">
+            Por favor, insira um valor entre 1 e 10.
+        </div>
+    </div>
+
+    <div>
+        <button type="button" id="iniciar" onclick="iniciarAquecimento()">Iniciar Aquecimento</button>
+        @*<button type="button" onclick="iniciarAquecimentoRapido()">Início Rápido</button>*@
+        <button id="btnInicioRapido" type="button" onclick="iniciarAquecimentoRapido()">Início Rápido</button>
+        <button type="button" onclick="pausarOuCancelarAquecimento()">Pausar/Cancelar</button>
+    </div>
+
+    <!-- Div para exibir a mensagem de progresso -->
+    <div id="mensagem"></div>
+    <div id="progresso"></div>
+    <div id="processoAquecimento"></div>
+</form>
+<a href="/CadastroPrograma" class="btn btn-primary link-cadastro">Ir para Cadastro de Programa de Aquecimento</a>
+<script src="/js/microondas.js"></script>
+
+
+
+
