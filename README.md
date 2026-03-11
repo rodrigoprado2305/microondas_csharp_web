@@ -6,4 +6,4 @@ Ele é uma aplicação simples Web local, para simulação de um display de micr
 
 c#
 
-.NetCore 9.0
+.NetCore 10.0
