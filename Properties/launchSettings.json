@@ -17,7 +17,7 @@
     },
     "BennerMicroOndas": {
       "commandName": "Project",
-      "dotnetRunMessages": "true",
+      "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7204;http://localhost:5257",
       "environmentVariables": {
